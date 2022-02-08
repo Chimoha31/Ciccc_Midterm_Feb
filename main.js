@@ -9,19 +9,20 @@ async function callAPI() {
 
   products.map((product) => {
     const div = document.createElement("div");
-    const h2 = document.createElement("h2");
-    h2.textContent = product.title;
-    div.appendChild(h2);
-    // h2.style.display = "none";
-
+    
     const img = document.createElement("img");
     img.setAttribute("src", `${product.image}`);
     img.style.width = "200px";
-    img.style.height = "200px";
+    img.style.height = "250px";
     div.appendChild(img);
+    
+    const h4 = document.createElement("h4");
+    h4.textContent = product.title;
+    div.appendChild(h4);
+    // h4.style.display = "none";
 
     const p = document.createElement("p");
-    p.textContent = product.price;
+    p.textContent = `$${product.price}`;
     div.appendChild(p);
     pContainer.appendChild(div);
   });
