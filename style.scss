@@ -1,8 +1,185 @@
-
-#products_container {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
-img{
-  background-color: pink;
+// header {
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+
+//   & .main {
+//     position: absolute;
+//     top: 50%;
+//     right: 30%;
+//     transform: translateY(-50%);
+
+//     & h1 {
+//       font-family: "Baloo Bhaijaan 2", cursive;
+//       color: rgb(240, 138, 138);
+//       font-size: 70px;
+//     }
+//   }
+// }
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./img/background15.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#mobile {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & ul {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    & li {
+      font-family: "Baloo Bhaijaan 2", cursive;
+      text-align: center;
+      margin-right: 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
+      & i {
+        color: rgba(122, 70, 70, 0.911);
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+#icon img,
+#icon i {
+  display: none;
+}
+
+#mobile_footer {
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  & img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 551px) and (max-width: 984px) {
+  #mobile {
+    position: relative;
+    & ul {
+      position: absolute;
+      top: 10%;
+      width: 100%;
+      height: 20%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
+
+      & li {
+        font-family: "Baloo Bhaijaan 2", cursive;
+        text-align: center;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 985px) and (max-width: 1200px) {
+  #icon img,
+  #icon i {
+    display: block;
+  }
+
+  body {
+    background-image: url("./img/background17.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #icon .fa-moon {
+    color: gold;
+    position: absolute;
+    font-size: 60px;
+    top: 55%;
+    left: 55%;
+    animation: erring 3s forwards infinite;
+  }
+
+  #icon .fa-redhat {
+    color: rgb(163, 67, 67);
+    position: absolute;
+    font-size: 200px;
+    top: 0;
+    left: 64%;
+    animation: hat 3s infinite forwards;
+  }
+
+  #icon img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    font-size: 60px;
+    top: 61%;
+    left: 30%;
+    animation: lip 3s infinite forwards;
+  }
+
+  @keyframes erring {
+    0% {
+      transform: rotate(-35deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(-35deg);
+    }
+  }
+
+  @keyframes hat {
+    0% {
+      transform: rotate(35deg);
+    }
+    50% {
+      transform: rotate(25deg);
+    }
+    100% {
+      transform: rotate(35deg);
+    }
+  }
+
+  @keyframes lip {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 }

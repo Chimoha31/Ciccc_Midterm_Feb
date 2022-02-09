@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+#products_container {
+  border: 1px solid red;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#products_container div {
+  margin: 0 auto;
+}
+
+#products_container img {
+  display: block;
+  margin: 0 auto;
+}
+
+#products_container h4, #products_container p {
+  text-align: center;
+}
+/*# sourceMappingURL=shopping.css.map */

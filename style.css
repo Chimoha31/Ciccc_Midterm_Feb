@@ -1,8 +1,237 @@
-#products_container {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
-img {
-  /* background-color: pink; */
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./img/background15.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#mobile {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mobile ul {
+  width: 50%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+#mobile ul li {
+  font-family: "Baloo Bhaijaan 2", cursive;
+  text-align: center;
+  margin-right: 30px;
+}
+
+#mobile ul li:hover {
+  cursor: pointer;
+}
+
+#mobile ul li i {
+  color: rgba(122, 70, 70, 0.911);
+  margin-right: 5px;
+}
+
+#icon img,
+#icon i {
+  display: none;
+}
+
+#mobile_footer {
+  border: 1px solid red;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+#mobile_footer img {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media (min-width: 551px) and (max-width: 984px) {
+  #mobile {
+    position: relative;
+  }
+  #mobile ul {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 20%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+  #mobile ul li {
+    font-family: "Baloo Bhaijaan 2", cursive;
+    text-align: center;
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 985px) and (max-width: 1200px) {
+  #icon img,
+  #icon i {
+    display: block;
+  }
+  body {
+    background-image: url("./img/background17.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #icon .fa-moon {
+    color: gold;
+    position: absolute;
+    font-size: 60px;
+    top: 55%;
+    left: 55%;
+    -webkit-animation: erring 3s forwards infinite;
+            animation: erring 3s forwards infinite;
+  }
+  #icon .fa-redhat {
+    color: #a34343;
+    position: absolute;
+    font-size: 200px;
+    top: 0;
+    left: 64%;
+    -webkit-animation: hat 3s infinite forwards;
+            animation: hat 3s infinite forwards;
+  }
+  #icon img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    font-size: 60px;
+    top: 61%;
+    left: 30%;
+    -webkit-animation: lip 3s infinite forwards;
+            animation: lip 3s infinite forwards;
+  }
+  @-webkit-keyframes erring {
+    0% {
+      -webkit-transform: rotate(-35deg);
+              transform: rotate(-35deg);
+    }
+    50% {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+    }
+    100% {
+      -webkit-transform: rotate(-35deg);
+              transform: rotate(-35deg);
+    }
+  }
+  @keyframes erring {
+    0% {
+      -webkit-transform: rotate(-35deg);
+              transform: rotate(-35deg);
+    }
+    50% {
+      -webkit-transform: rotate(5deg);
+              transform: rotate(5deg);
+    }
+    100% {
+      -webkit-transform: rotate(-35deg);
+              transform: rotate(-35deg);
+    }
+  }
+  @-webkit-keyframes hat {
+    0% {
+      -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+    }
+    50% {
+      -webkit-transform: rotate(25deg);
+              transform: rotate(25deg);
+    }
+    100% {
+      -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+    }
+  }
+  @keyframes hat {
+    0% {
+      -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+    }
+    50% {
+      -webkit-transform: rotate(25deg);
+              transform: rotate(25deg);
+    }
+    100% {
+      -webkit-transform: rotate(35deg);
+              transform: rotate(35deg);
+    }
+  }
+  @-webkit-keyframes lip {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.3);
+              transform: scale(1.3);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes lip {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(1.3);
+              transform: scale(1.3);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
 }
 /*# sourceMappingURL=style.css.map */
