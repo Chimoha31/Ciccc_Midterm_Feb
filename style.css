@@ -12,6 +12,10 @@
   display: none;
 }
 
+.click {
+  display: none;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -90,8 +94,8 @@ body {
   bottom: 0;
   -webkit-animation: heel01 5s steps(6, end) forwards;
           animation: heel01 5s steps(6, end) forwards;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 #mobile_footer img:nth-child(2) {
@@ -103,8 +107,8 @@ body {
   bottom: 50px;
   -webkit-animation: heel01 5s steps(6, end) forwards;
           animation: heel01 5s steps(6, end) forwards;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
 }
@@ -118,8 +122,8 @@ body {
   bottom: 100px;
   -webkit-animation: heel02 5s steps(6, end) forwards;
           animation: heel02 5s steps(6, end) forwards;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-delay: 5.8s;
           animation-delay: 5.8s;
 }
@@ -133,8 +137,8 @@ body {
   bottom: 150px;
   -webkit-animation: heel02 5s steps(6, end) forwards;
           animation: heel02 5s steps(6, end) forwards;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   -webkit-animation-delay: 5.3s;
           animation-delay: 5.3s;
 }
@@ -198,6 +202,8 @@ body {
     right: -200px;
     -webkit-animation: heel01 8s steps(13, end) inifinite forwards;
             animation: heel01 8s steps(13, end) inifinite forwards;
+    -webkit-animation-iteration-count: 3;
+            animation-iteration-count: 3;
   }
   #mobile_footer img:nth-child(2) {
     -webkit-animation-delay: 0.3s;
@@ -227,7 +233,8 @@ body {
     display: none;
   }
   #icon img,
-  #icon i {
+  #icon i,
+  .click {
     display: block;
   }
   body {
@@ -313,7 +320,7 @@ body {
   }
   #icon .fa-moon:hover,
   #icon .fa-redhat:hover,
-  #lip img:hover {
+  .lip img:hover {
     -webkit-animation: rolling 1s forwards;
             animation: rolling 1s forwards;
     opacity: 1;
