@@ -8,10 +8,9 @@
   font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
-#icon p {
-  display: none;
-}
-
+#icon p,
+#icon img,
+#icon i,
 .click {
   display: none;
 }
@@ -72,11 +71,6 @@ body {
 #mobile ul li i {
   color: rgba(122, 70, 70, 0.911);
   margin-right: 5px;
-}
-
-#icon img,
-#icon i {
-  display: none;
 }
 
 #mobile_footer {
@@ -227,7 +221,7 @@ body {
   }
 }
 
-@media (min-width: 985px) and (max-width: 1200px) {
+@media (min-width: 985px) {
   #mobile,
   #mobile_footer {
     display: none;
