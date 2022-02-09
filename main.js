@@ -1,7 +1,7 @@
 'use strict';
 const moonIcon = document.querySelector('#icon i:nth-child(1)');
 const hatIcon = document.querySelector('#icon .fa-redhat');
-const lipIcon = document.querySelector('#icon img');
+const lipIcon = document.querySelector('.lip img');
 const iconDiv = document.querySelector('#icon');
 const moonDivA = document.querySelector('.moon a');
 const hatDivA = document.querySelector('.hat a');

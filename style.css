@@ -236,6 +236,39 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
+  .click {
+    position: relative;
+  }
+  .click i {
+    margin-right: 10px;
+  }
+  .click .fa-moon {
+    color: gold;
+    font-size: 30px;
+    opacity: 0.6;
+  }
+  .click .fa-redhat {
+    color: rgba(185, 131, 131, 0.815);
+    font-size: 30px;
+    opacity: 0.6;
+  }
+  .click img {
+    width: 30px;
+    height: 30px;
+    opacity: 0.6;
+  }
+  .click ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .clickme img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 5px;
+    left: 40px;
+  }
   #icon .fa-moon {
     color: gold;
     position: absolute;
@@ -267,7 +300,7 @@ body {
     -webkit-animation: hat 3s infinite forwards;
             animation: hat 3s infinite forwards;
   }
-  #icon img {
+  .lip img {
     display: block;
     width: 90px;
     height: 90px;
@@ -280,7 +313,7 @@ body {
   }
   #icon .fa-moon:hover,
   #icon .fa-redhat:hover,
-  #icon img:hover {
+  #lip img:hover {
     -webkit-animation: rolling 1s forwards;
             animation: rolling 1s forwards;
     opacity: 1;
