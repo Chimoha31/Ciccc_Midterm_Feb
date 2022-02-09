@@ -85,6 +85,7 @@ body {
   width: 100%;
   height: 50vh;
   & img:nth-child(1) {
+    opacity: 0.7;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -94,6 +95,7 @@ body {
     animation-iteration-count: 2;
   }
   & img:nth-child(2) {
+    opacity: 0.7;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -104,6 +106,7 @@ body {
     animation-delay: 0.5s;
   }
   & img:nth-child(3) {
+    opacity: 0.7;
     width: 45px;
     height: 45px;
     position: absolute;
@@ -114,6 +117,7 @@ body {
     animation-delay: 5.8s;
   }
   & img:nth-child(4) {
+    opacity: 0.7;
     width: 45px;
     height: 45px;
     position: absolute;
@@ -200,11 +204,22 @@ body {
   #icon .fa-moon {
     color: gold;
     position: absolute;
-    font-size: 60px;
+    font-size: 70px;
     top: 55%;
-    left: 55%;
-    opacity: 0.4;
+    left: 54%;
+    opacity: 0.3;
     animation: erring 3s forwards infinite;
+  }
+
+  #icon p {
+    display: block;
+    position: absolute;
+    top: 23%;
+    left: 42%;
+    font-family: "Pacifico", cursive;
+    color: rgba(185, 131, 131, 0.815);
+    font-size: 80px;
+    animation: menu 3s forwards;
   }
 
   #icon .fa-redhat {
@@ -213,19 +228,18 @@ body {
     font-size: 200px;
     top: 0;
     left: 64%;
-    opacity: 0.4;
+    opacity: 0.3;
     animation: hat 3s infinite forwards;
   }
 
   #icon img {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     position: absolute;
-    font-size: 60px;
     top: 61%;
     left: 30%;
-    opacity: 0.4;
+    opacity: 0.3;
     animation: lip 3s infinite forwards;
   }
 
@@ -236,10 +250,6 @@ body {
     opacity: 1;
   }
 
-  & #icon p {
-    display: block;
-    color: white;
-  }
   @keyframes erring {
     0% {
       transform: rotate(-35deg);
@@ -279,6 +289,17 @@ body {
   @keyframes rolling {
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes menu {
+    from {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }
