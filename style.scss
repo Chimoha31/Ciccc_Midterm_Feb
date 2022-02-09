@@ -203,6 +203,7 @@ body {
     font-size: 60px;
     top: 55%;
     left: 55%;
+    opacity: 0.4;
     animation: erring 3s forwards infinite;
   }
 
@@ -212,9 +213,10 @@ body {
     font-size: 200px;
     top: 0;
     left: 64%;
+    opacity: 0.4;
     animation: hat 3s infinite forwards;
   }
-  
+
   #icon img {
     display: block;
     width: 80px;
@@ -223,13 +225,20 @@ body {
     font-size: 60px;
     top: 61%;
     left: 30%;
+    opacity: 0.4;
     animation: lip 3s infinite forwards;
   }
 
   #icon .fa-moon:hover,
   #icon .fa-redhat:hover,
   #icon img:hover {
-    animation: rolling 1s forwards infinite;
+    animation: rolling 1s forwards;
+    opacity: 1;
+  }
+
+  & #icon p {
+    display: block;
+    color: white;
   }
   @keyframes erring {
     0% {
@@ -254,7 +263,7 @@ body {
       transform: rotate(35deg);
     }
   }
-  
+
   @keyframes lip {
     0% {
       transform: scale(1);
@@ -268,8 +277,8 @@ body {
   }
 
   @keyframes rolling {
-   100%{
-     transform: rotate(360deg);
-   }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
