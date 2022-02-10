@@ -18,10 +18,10 @@ body {
 header {
   position: sticky;
   top: 0;
-  // z-index: 900;
+  z-index: 900;
 }
 #menu_bar {
-  background-color: rgba(32, 32, 30, 0.671);
+  background-color: rgba(32, 32, 30, 0.829);
   & img {
     width: 50px;
     height: 50px;
@@ -167,23 +167,51 @@ header {
 // -------------------------
 #products_container {
   border: 1px solid red;
-
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   & div {
-    margin: 0 auto;
+    width: 300px;
+    margin: 20px auto;
   }
   & img {
     display: block;
     margin: 0 auto;
+    width: 200px;
+    height: 250px;
+    // &:hover {
+    //   // opacity: 0.6;
+    // }
   }
   & h4,
-  p {
+  p{
     text-align: center;
+    font-family: 'Sansita', sans-serif;
+  }
+  
+  & h4 {
+    font-size: 16px;
+  }
+  
+  & button {
+    font-family: 'Sansita', sans-serif;
+    color: #ccc;
+    padding: 4px;
+    background-color: rgba(46, 46, 44, 0.767);
+    display: block;
+    margin: 0 auto;
+    width: 110px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 #222121e1;
+    &:hover{
+      opacity: 0.9;
+      transform: translate(0, 3px);
+      box-shadow: 0 2px 0 #222222be;
+    }
   }
 }
-
 
 @media (min-width: 700px) {
   #animation_slide {
