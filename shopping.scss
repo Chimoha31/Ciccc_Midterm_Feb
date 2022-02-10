@@ -56,7 +56,7 @@ header {
 // -------------------------
 #animation_slide {
   width: 100%;
-  height: 70%;
+  height: 45%;
   position: relative;
 
   & .slide_images img {
@@ -68,7 +68,19 @@ header {
   }
 
   & .img_1 {
+    border: 1px solid red;
+    height: 45vh;
+    position: relative;
     animation: slide01 12s forwards infinite;
+    & p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(204, 113, 113, 0.959);
+      font-size: 35px;
+      font-family: "Baloo Bhaijaan 2", cursive;
+    }
   }
   & .img_2 {
     animation: slide02 12s forwards infinite;
@@ -82,16 +94,16 @@ header {
 }
 
 @keyframes slide01 {
-  0%{
+  0% {
     opacity: 0;
   }
-  25%{
+  25% {
     opacity: 1;
   }
-  50%{
+  50% {
     opacity: 0;
   }
-  75%{
+  75% {
     opacity: 0;
   }
   100% {
@@ -99,16 +111,16 @@ header {
   }
 }
 @keyframes slide02 {
-  0%{
+  0% {
     opacity: 0;
   }
-  25%{
+  25% {
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 1;
   }
-  75%{
+  75% {
     opacity: 0;
   }
   100% {
@@ -116,16 +128,16 @@ header {
   }
 }
 @keyframes slide03 {
-  0%{
+  0% {
     opacity: 0;
   }
-  25%{
+  25% {
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 0;
   }
-  75%{
+  75% {
     opacity: 1;
   }
   100% {
@@ -133,16 +145,16 @@ header {
   }
 }
 @keyframes slide04 {
-  0%{
+  0% {
     opacity: 0;
   }
-  25%{
+  25% {
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 0;
   }
-  75%{
+  75% {
     opacity: 0;
   }
   100% {
@@ -150,12 +162,12 @@ header {
   }
 }
 
-
 // --------------------------
 // DOOM
 // -------------------------
 #products_container {
   border: 1px solid red;
+
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -172,21 +184,12 @@ header {
   }
 }
 
-// header {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
 
-//   & .main {
-//     position: absolute;
-//     top: 50%;
-//     right: 30%;
-//     transform: translateY(-50%);
-
-//     & h1 {
-//       font-family: "Baloo Bhaijaan 2", cursive;
-//       color: rgb(240, 138, 138);
-//       font-size: 70px;
-//     }
-//   }
-// }
+@media (min-width: 700px) {
+  #animation_slide {
+    height: 70%;
+    & .img_1 {
+      height: 70vh;
+    }
+  }
+}
