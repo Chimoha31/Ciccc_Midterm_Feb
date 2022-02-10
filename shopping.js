@@ -1,4 +1,12 @@
 "use strict";
+//------------------------
+// Slides
+// ----------------------
+const slide01 = document.querySelector(".img_1");
+const p01 = document.createElement("p");
+p01.textContent = "Everything at least 10% OFF";
+slide01.appendChild(p01);
+console.log(slide01);
 
 //------------------------
 // API (Shopping items)
@@ -30,41 +38,49 @@ async function callAPI() {
     addButton.textContent = "ADD TO CART";
     div.appendChild(addButton);
     pContainer.appendChild(div);
-
-    // let cartItemNum = 0;
-    // addButton.addEventListener("click", function () {
-    //   const cart = document.querySelector("span");
-    //   cart.textContent = cartItemNum;
-    //   cartItemNum ++;;
-    //   console.log("CartItemNum", cartItemNum);
-    //   console.log("cart", cart);
-    // });
   });
   console.log(pContainer);
 
+// Add to cart (+number)
   const buttons = document.querySelectorAll("button");
-  let numArr = [];
   let num = 0;
-  const cart = document.querySelector("span");
   for (let i = 0; i < buttons.length; i++) {
+    const cart = document.querySelector("span");
     buttons[i].addEventListener("click", function () {
       cart.textContent = num + 1;
       num++;
       console.log("CartItemNum", num);
       console.log("cart", cart);
-      numArr.push(num);
-      console.log(numArr);
     });
   }
-  // console.log(buttons);
+
+  // Items in cart
+
 }
 callAPI();
 
-//------------------------
-// Slides
-// ----------------------
-const slide01 = document.querySelector(".img_1");
-const p01 = document.createElement("p");
-p01.textContent = "Everything at least 10% OFF";
-slide01.appendChild(p01);
-console.log(slide01);
+
+
+// --------------------------
+// Modal
+// -------------------------
+const modal = document.querySelector('.modal');
+const closeBtn = document.querySelector('.close');
+const overlay = document.querySelector('.overlay');
+
+const cartIcon = document.querySelector('.fa-cart-arrow-down');
+cartIcon.addEventListener('click', function(e) {
+  e.preventDefault();
+  modal.classList.add('active');
+  overlay.classList.add('active');
+});
+
+closeBtn.addEventListener('click', function(){
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+overlay.addEventListener('click', function() {
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+});
