@@ -13,7 +13,7 @@ body {
 }
 
 //-------------------
-//  menu
+//  Nav menu bar
 //------------------
 header {
   position: sticky;
@@ -21,7 +21,8 @@ header {
   // z-index: 900;
 }
 #menu_bar {
-  background-color: rgba(32, 32, 30, 0.829);
+  background-color: rgba(32, 32, 30, 0.945);
+
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.493);
   & img {
     width: 50px;
@@ -64,12 +65,13 @@ header {
     width: 100%;
     height: 100%;
     position: absolute;
+    box-shadow: 3px 3px 3px rgba(150, 145, 145, 0.733);
+
     top: 0;
     left: 0;
   }
 
   & .img_1 {
-    border: 1px solid red;
     height: 45vh;
     position: relative;
     animation: slide01 12s forwards infinite;
@@ -82,7 +84,7 @@ header {
       left: 50%;
       transform: translate(-50%, -50%);
       border: 1px solid rgba(102, 50, 50, 0.849);
-      background-color: rgba(102, 50, 50, 0.849);
+      background-color: rgba(65, 32, 32, 0.849);
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.712);
       border-radius: 10px;
       color: #ccc;
@@ -174,7 +176,6 @@ header {
 // DOOM
 // -------------------------
 #products_container {
-  border: 1px solid red;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -187,9 +188,6 @@ header {
     margin: 0 auto;
     width: 200px;
     height: 250px;
-    // &:hover {
-    //   // opacity: 0.6;
-    // }
   }
   & h4,
   p {
@@ -244,9 +242,10 @@ header {
 .modal {
   width: 300px;
   padding: 15px 20px;
-  background: #fff;
-  position: absolute;
-  top: 15%;
+  background: rgba(238, 236, 236, 0.849);
+  border-radius: 10px;
+  position: fixed;
+  top: 20%;
   left: 80%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -256,7 +255,8 @@ header {
     // border: 1px solid red;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
     & p,
     button {
       display: inline-block;
@@ -286,6 +286,15 @@ header {
 
 .modal button {
   font-size: 13px;
+}
+
+footer{
+  height: 100px;
+  background-color: rgba(32, 32, 30, 0.945);
+  & p {
+    color: white;
+    text-align: center;
+  }
 }
 
 

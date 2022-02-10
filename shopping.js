@@ -31,7 +31,7 @@ async function callAPI() {
     // h4.style.display = "none";
 
     const p = document.createElement("p");
-    p.textContent = `$${product.price}`;
+    p.textContent = `${Math.trunc(product.price)}`;
     div.appendChild(p);
 
     const addButton = document.createElement("button");
@@ -41,46 +41,84 @@ async function callAPI() {
   });
   console.log(pContainer);
 
-// Add to cart (+number)
+  // Add to cart (+number)
   const buttons = document.querySelectorAll("button");
   let num = 0;
+  const arry = [];
   for (let i = 0; i < buttons.length; i++) {
     const cart = document.querySelector("span");
     buttons[i].addEventListener("click", function () {
       cart.textContent = num + 1;
       num++;
-      console.log("CartItemNum", num);
-      console.log("cart", cart);
+
+      // modal img
+      const originalImg = buttons[i].parentNode.firstChild;
+      const doublicateImg = originalImg.cloneNode();
+      console.log(doublicateImg);
+      doublicateImg.style.width = "70px";
+      doublicateImg.style.height = "70px";
+      doublicateImg.style.borderRadius = "10px";
+      // modal price
+      const originalPrice = buttons[i].parentNode.childNodes[2];
+      const doublicatePrice = originalPrice.cloneNode();
+      doublicatePrice.textContent =
+        buttons[i].parentNode.childNodes[2].textContent;
+      console.log(doublicatePrice);
+
+      let totalPrice = document.querySelector(".total_price span");
+      arry.push(parseInt(doublicatePrice.textContent));
+      console.log(arry);
+      let totalNum = 0;
+      for (let j = 0; j < arry.length; j++) {
+        totalNum += arry[j];
+      }
+      console.log(totalNum);
+      totalPrice.textContent = totalNum;
+
+      // modal Delete button
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "DELETE";
+      deleteBtn.addEventListener("click", function () {
+        if (li.length >= 1) {
+          li.remove();
+        } else {
+          li.textContent = "Empty Cart";
+        }
+      });
+
+      const ul = document.querySelector(".modal ul");
+      const li = document.createElement("li");
+      ul.appendChild(li);
+      li.appendChild(doublicateImg);
+      li.appendChild(doublicatePrice);
+      li.appendChild(deleteBtn);
+      // totalPriceDiv.appendChild(totalPrice);
+      console.log(modal);
     });
   }
-
-  // Items in cart
-
 }
 callAPI();
-
-
 
 // --------------------------
 // Modal
 // -------------------------
-const modal = document.querySelector('.modal');
-const closeBtn = document.querySelector('.close');
-const overlay = document.querySelector('.overlay');
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close");
+const overlay = document.querySelector(".overlay");
 
-const cartIcon = document.querySelector('.fa-cart-arrow-down');
-cartIcon.addEventListener('click', function(e) {
+const cartIcon = document.querySelector(".fa-cart-arrow-down");
+cartIcon.addEventListener("click", function (e) {
   e.preventDefault();
-  modal.classList.add('active');
-  overlay.classList.add('active');
+  modal.classList.add("active");
+  overlay.classList.add("active");
 });
 
-closeBtn.addEventListener('click', function(){
-  modal.classList.remove('active');
-  overlay.classList.remove('active');
+closeBtn.addEventListener("click", function () {
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
-overlay.addEventListener('click', function() {
-  modal.classList.remove('active');
-  overlay.classList.remove('active');
+overlay.addEventListener("click", function () {
+  modal.classList.remove("active");
+  overlay.classList.remove("active");
 });
