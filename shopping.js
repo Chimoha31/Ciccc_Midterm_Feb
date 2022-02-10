@@ -65,6 +65,7 @@ async function callAPI() {
         buttons[i].parentNode.childNodes[2].textContent;
       console.log(doublicatePrice);
 
+      // Total price in Modal
       let totalPrice = document.querySelector(".total_price span");
       arry.push(parseInt(doublicatePrice.textContent));
       console.log(arry);
@@ -79,11 +80,15 @@ async function callAPI() {
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "DELETE";
       deleteBtn.addEventListener("click", function () {
-        if (li.length >= 1) {
-          li.remove();
-        } else {
-          li.textContent = "Empty Cart";
+        li.remove();
+        cart.textContent = num - 1;
+        num--;
+
+        for (let j = 0; j < arry.length; j++) {
+          totalNum -= arry[j];
         }
+        console.log(totalNum);
+        totalPrice.textContent = totalNum;
       });
 
       const ul = document.querySelector(".modal ul");

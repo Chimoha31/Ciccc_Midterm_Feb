@@ -173,7 +173,7 @@ header {
 }
 
 // --------------------------
-// DOOM
+// DOOM products
 // -------------------------
 #products_container {
   margin: 0 auto;
@@ -193,6 +193,10 @@ header {
   p {
     text-align: center;
     font-family: "Sansita", sans-serif;
+  }
+
+  & p::before {
+    content: "$";
   }
 
   & h4 {
@@ -260,7 +264,11 @@ header {
     & p,
     button {
       display: inline-block;
-      margin-left: 50px;
+      margin-left: 20px;
+      font-size:30px;
+    }
+    & p::before {
+      content: "$";
     }
   }
 }

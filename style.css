@@ -165,7 +165,7 @@ body {
   }
 }
 
-@media (min-width: 551px) and (max-width: 984px) {
+@media (min-width: 551px) and (max-width: 999px) {
   #mobile {
     position: relative;
   }
@@ -221,7 +221,7 @@ body {
   }
 }
 
-@media (min-width: 985px) {
+@media (min-width: 1000px) {
   #mobile,
   #mobile_footer {
     display: none;
