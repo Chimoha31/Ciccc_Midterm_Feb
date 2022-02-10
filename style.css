@@ -196,8 +196,8 @@ body {
     right: -200px;
     -webkit-animation: heel01 8s steps(13, end) inifinite forwards;
             animation: heel01 8s steps(13, end) inifinite forwards;
-    -webkit-animation-iteration-count: 3;
-            animation-iteration-count: 3;
+    -webkit-animation-iteration-count: 5;
+            animation-iteration-count: 5;
   }
   #mobile_footer img:nth-child(2) {
     -webkit-animation-delay: 0.3s;

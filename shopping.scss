@@ -12,23 +12,165 @@ body {
   height: 100vh;
 }
 
+//-------------------
+//  menu
+//------------------
+header {
+  position: sticky;
+  top: 0;
+  // z-index: 900;
+}
+#menu_bar {
+  background-color: rgba(32, 32, 30, 0.671);
+  & img {
+    width: 50px;
+    height: 50px;
+  }
+  & ul {
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & li:nth-child(1) {
+      padding-top: 10px;
+    }
+    & li {
+      font-family: "Supermercado One", cursive;
+      color: white;
+    }
+    & i {
+      margin-right: 8px;
+      font-size: 20px;
+      &.fa-redhat,
+      &.fa-envelope,
+      &.fa-cart-arrow-down {
+        color: white;
+      }
+    }
+  }
+}
+
+// --------------------------
+// animation-slide
+// -------------------------
+#animation_slide {
+  width: 100%;
+  height: 70%;
+  position: relative;
+
+  & .slide_images img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  & .img_1 {
+    animation: slide01 12s forwards infinite;
+  }
+  & .img_2 {
+    animation: slide02 12s forwards infinite;
+  }
+  & .img_3 {
+    animation: slide03 12s forwards infinite;
+  }
+  & .img_4 {
+    animation: slide04 12s forwards infinite;
+  }
+}
+
+@keyframes slide01 {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide02 {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide03 {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide04 {
+  0%{
+    opacity: 0;
+  }
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// --------------------------
+// DOOM
+// -------------------------
 #products_container {
   border: 1px solid red;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  & div{
+  & div {
     margin: 0 auto;
   }
-& img{
-  display: block;
-  margin: 0 auto;
-}
-  & h4, p {
+  & img {
+    display: block;
+    margin: 0 auto;
+  }
+  & h4,
+  p {
     text-align: center;
   }
 }
-
 
 // header {
 //   position: relative;

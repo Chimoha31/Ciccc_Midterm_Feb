@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-  href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP&family=Yanone+Kaffeesatz:wght@300;400&display=swap"
-  rel="stylesheet"
-/>
-<link
-  href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-  rel="stylesheet"
-/>
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-  crossorigin="anonymous"
-/>
-<link rel="stylesheet" href="shopping.css">
-  <title>Document</title>
-</head>
-<body>
-  <main id="products_container">
-    <!-- DOM -->
-  </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP&family=Yanone+Kaffeesatz:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
+    <link
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="shopping.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- menu bar -->
+    <header>
+      <div id="menu_bar">
+        <ul>
+          <li><a href="index.html"><img src="img/logo06.gif"></a></li>
+          <li><a href="#"><i class="fa-brands fa-redhat"></i></a>Company</li>
+          <li><a href="#"><i class="fa-regular fa-envelope"></i></a>Contact</li>
+          <li><a href="#"><i class="fas fa-cart-arrow-down"></i></a>Cart<span>(0)</span></li>
+        </ul>
+      </div>
+    </header>
 
+    <!-- animation -->
+    <section id="animation_slide">
+      <div class="slide_images">
+        <!-- 1 -->
+        <div class="img_1">
+          <img src="img/background02.webp">
+        </div>
+      <!-- 2 -->
+        <div class="img_2">
+          <img src="img/background03.jpg">
+        </div>
+        <!-- 3 -->
+        <div class="img_3">
+          <img src="img/background04.jpg">
+        </div>
+      <!-- 4 -->
+        <div class="img_4">
+          <img src="img/background05.jpg">
+        </div>
+      </div>
+    </section>
 
-  <div class="main">
-    <!-- <h1>
+    <main id="products_container">
+      <!-- DOM -->
+    </main>
+
+    <div class="main">
+      <!-- <h1>
       VALENTINE'S DEAL <br />
       ALL ITEMS <br />
       FROM $12+
     </h1> -->
-  </div>
-  <script src="shopping.js"></script>
-  
-
-</body>
+    </div>
+    <script src="shopping.js"></script>
+  </body>
 </html>
