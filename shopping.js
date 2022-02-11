@@ -71,7 +71,7 @@ async function callAPI() {
       console.log(doublicatePrice);
 
       // --------------------------
-      // Modal  Total Price
+      // Modal Total Price
       // -------------------------
       let totalPrice = document.querySelector(".total_price span");
       arry.push(parseInt(doublicatePrice.textContent));
@@ -89,10 +89,10 @@ async function callAPI() {
       const close = document.querySelector(".close");
       const overlay = document.querySelector(".overlay");
       close.addEventListener("click", function () {
-        arry = [];
+          arry = [];
       });
       overlay.addEventListener("click", function () {
-        arry = [];
+          arry = [];
       });
       // --------------------------
       // Modal  Delete button
@@ -104,8 +104,11 @@ async function callAPI() {
         cart.textContent = num - 1;
         num--;
 
-        for (let j = 0; j < arry.length; j++) {
-          totalNum = totalNum - arry[j];
+        let allBtns = document.querySelectorAll(".modal button");
+        let totalNum = 0;
+        for (let q = 0; q < allBtns.length; q++) {
+          const randomDeleteItemPrice = parseInt(allBtns[q].parentNode.childNodes[1].textContent);
+          totalNum = totalNum - randomDeleteItemPrice;
         }
         console.log(totalNum);
         totalPrice.textContent = Math.abs(totalNum);
