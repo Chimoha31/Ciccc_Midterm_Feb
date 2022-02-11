@@ -39,7 +39,7 @@ header {
     }
     & li {
       font-family: "Supermercado One", cursive;
-      color: white;
+      color: #ccc;
     }
     & i {
       margin-right: 8px;
@@ -173,7 +173,22 @@ header {
 }
 
 // --------------------------
-// DOOM products
+// Option
+// -------------------------
+.input-group {
+  // border: 1px solid red;
+  margin: 10px auto;
+  & .custom-select {
+    width: 150px;
+    border-radius: 10px;
+  }
+  & .input-group-append {
+    width: 70px;
+  }
+}
+
+// --------------------------
+// DOM products
 // -------------------------
 #products_container {
   margin: 0 auto;
@@ -243,7 +258,7 @@ header {
   visibility: visible;
 }
 
-.modal {
+.modal01 {
   width: 300px;
   padding: 15px 20px;
   background: rgb(255, 255, 255);
@@ -251,7 +266,7 @@ header {
   border-radius: 10px;
   position: fixed;
   top: 20%;
-  left: 80%;
+  left: 60%;
   transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
@@ -282,12 +297,12 @@ header {
   }
 }
 
-.modal.active {
+.modal01.active {
   opacity: 1;
   visibility: visible;
 }
 
-.modal .close {
+.modal01 .close {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -295,7 +310,7 @@ header {
   font-size: 20px;
 }
 
-.modal p {
+.modal01 p {
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -306,11 +321,18 @@ header {
 
 
 footer{
+  position: relative;
   height: 100px;
   background-color: rgba(32, 32, 30, 0.945);
   & p {
-    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ccc;
     text-align: center;
+    font-size: 12px;
+    font-family: "Sansita", sans-serif;
   }
 }
 
@@ -326,5 +348,10 @@ footer{
         font-size: 30px;
       }
     }
+  }
+
+  .modal01 {
+    top: 20%;
+    left: 80%;
   }
 }

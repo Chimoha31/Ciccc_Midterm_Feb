@@ -104,7 +104,7 @@ async function callAPI() {
         cart.textContent = num - 1;
         num--;
 
-        let allBtns = document.querySelectorAll(".modal button");
+        let allBtns = document.querySelectorAll(".modal01 button");
         let totalNum = 0;
         for (let q = 0; q < allBtns.length; q++) {
           const randomDeleteItemPrice = parseInt(allBtns[q].parentNode.childNodes[1].textContent);
@@ -114,7 +114,7 @@ async function callAPI() {
         totalPrice.textContent = Math.abs(totalNum);
       });
 
-      const ul = document.querySelector(".modal ul");
+      const ul = document.querySelector(".modal01 ul");
       const li = document.createElement("li");
       ul.appendChild(li);
       li.appendChild(doublicateImg);
@@ -129,7 +129,7 @@ callAPI();
 // --------------------------
 // Modal
 // -------------------------
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal01");
 const closeBtn = document.querySelector(".close");
 const overlay = document.querySelector(".overlay");
 

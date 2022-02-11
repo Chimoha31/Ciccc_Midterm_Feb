@@ -49,7 +49,7 @@ header {
 
 #menu_bar ul li {
   font-family: "Supermercado One", cursive;
-  color: white;
+  color: #ccc;
 }
 
 #menu_bar ul i {
@@ -262,6 +262,19 @@ header {
   }
 }
 
+.input-group {
+  margin: 10px auto;
+}
+
+.input-group .custom-select {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.input-group .input-group-append {
+  width: 70px;
+}
+
 #products_container {
   margin: 0 auto;
   display: -webkit-box;
@@ -338,7 +351,7 @@ header {
   visibility: visible;
 }
 
-.modal {
+.modal01 {
   width: 300px;
   padding: 15px 20px;
   background: white;
@@ -347,7 +360,7 @@ header {
   border-radius: 10px;
   position: fixed;
   top: 20%;
-  left: 80%;
+  left: 60%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
@@ -356,7 +369,7 @@ header {
   transition: .3s;
 }
 
-.modal ul {
+.modal01 ul {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -369,14 +382,14 @@ header {
       justify-content: space-around;
 }
 
-.modal ul p,
-.modal ul button {
+.modal01 ul p,
+.modal01 ul button {
   display: inline-block;
   margin-left: 20px;
   font-size: 30px;
 }
 
-.modal ul button {
+.modal01 ul button {
   width: 60px;
   padding: 3px;
   border: 1px solid #5f5e5e;
@@ -385,16 +398,16 @@ header {
   background-color: aliceblue;
 }
 
-.modal ul p::before {
+.modal01 ul p::before {
   content: "$";
 }
 
-.modal.active {
+.modal01.active {
   opacity: 1;
   visibility: visible;
 }
 
-.modal .close {
+.modal01 .close {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -402,7 +415,7 @@ header {
   font-size: 20px;
 }
 
-.modal p {
+.modal01 p {
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -412,13 +425,21 @@ header {
 }
 
 footer {
+  position: relative;
   height: 100px;
   background-color: rgba(32, 32, 30, 0.945);
 }
 
 footer p {
-  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ccc;
   text-align: center;
+  font-size: 12px;
+  font-family: "Sansita", sans-serif;
 }
 
 @media (min-width: 700px) {
@@ -431,6 +452,10 @@ footer p {
   #animation_slide .img_1 p {
     width: 45%;
     font-size: 30px;
+  }
+  .modal01 {
+    top: 20%;
+    left: 80%;
   }
 }
 /*# sourceMappingURL=shopping.css.map */
