@@ -28,7 +28,6 @@ async function callAPI() {
     const h4 = document.createElement("h4");
     h4.textContent = product.title;
     div.appendChild(h4);
-    // h4.style.display = "none";
 
     const p = document.createElement("p");
     p.textContent = `${Math.trunc(product.price)}`;
@@ -41,31 +40,39 @@ async function callAPI() {
   });
   console.log(pContainer);
 
-  // Add to cart (+number)
+  // --------------------------
+  // Cart number
+  // -------------------------
   const buttons = document.querySelectorAll("button");
   let num = 0;
-  const arry = [];
+  let arry = [];
   for (let i = 0; i < buttons.length; i++) {
     const cart = document.querySelector("span");
     buttons[i].addEventListener("click", function () {
       cart.textContent = num + 1;
       num++;
 
-      // modal img
+      // --------------------------
+      // Modal images
+      // -------------------------
       const originalImg = buttons[i].parentNode.firstChild;
       const doublicateImg = originalImg.cloneNode();
       console.log(doublicateImg);
       doublicateImg.style.width = "70px";
       doublicateImg.style.height = "70px";
-      doublicateImg.style.borderRadius = "10px";
-      // modal price
+      doublicateImg.style.borderRadius = "0%";
+      // --------------------------
+      // Modal Each price
+      // -------------------------
       const originalPrice = buttons[i].parentNode.childNodes[2];
       const doublicatePrice = originalPrice.cloneNode();
       doublicatePrice.textContent =
         buttons[i].parentNode.childNodes[2].textContent;
       console.log(doublicatePrice);
 
-      // Total price in Modal
+      // --------------------------
+      // Modal  Total Price
+      // -------------------------
       let totalPrice = document.querySelector(".total_price span");
       arry.push(parseInt(doublicatePrice.textContent));
       console.log(arry);
@@ -76,7 +83,20 @@ async function callAPI() {
       console.log(totalNum);
       totalPrice.textContent = totalNum;
 
-      // modal Delete button
+      // -------------------------------------------
+      // Click close overlay = Total price from 0
+      // -------------------------------------------
+      const close = document.querySelector(".close");
+      const overlay = document.querySelector(".overlay");
+      close.addEventListener("click", function () {
+        arry = [];
+      });
+      overlay.addEventListener("click", function () {
+        arry = [];
+      });
+      // --------------------------
+      // Modal  Delete button
+      // -------------------------
       const deleteBtn = document.createElement("button");
       deleteBtn.textContent = "DELETE";
       deleteBtn.addEventListener("click", function () {
@@ -85,10 +105,10 @@ async function callAPI() {
         num--;
 
         for (let j = 0; j < arry.length; j++) {
-          totalNum -= arry[j];
+          totalNum = totalNum - arry[j];
         }
         console.log(totalNum);
-        totalPrice.textContent = totalNum;
+        totalPrice.textContent = Math.abs(totalNum);
       });
 
       const ul = document.querySelector(".modal ul");
@@ -97,7 +117,6 @@ async function callAPI() {
       li.appendChild(doublicateImg);
       li.appendChild(doublicatePrice);
       li.appendChild(deleteBtn);
-      // totalPriceDiv.appendChild(totalPrice);
       console.log(modal);
     });
   }

@@ -246,7 +246,8 @@ header {
 .modal {
   width: 300px;
   padding: 15px 20px;
-  background: rgba(238, 236, 236, 0.849);
+  background: rgb(255, 255, 255);
+  box-shadow: 3px 3px 10px rgb(22, 22, 22);
   border-radius: 10px;
   position: fixed;
   top: 20%;
@@ -255,8 +256,8 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: .3s;
+  
   & ul {
-    // border: 1px solid red;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -266,6 +267,14 @@ header {
       display: inline-block;
       margin-left: 20px;
       font-size:30px;
+    }
+    & button {
+      width: 60px;
+      padding: 3px;
+      border: 1px solid rgb(95, 94, 94);
+      border-radius: 10px;
+      font-size: 20px;
+      background-color: aliceblue;
     }
     & p::before {
       content: "$";
@@ -288,13 +297,13 @@ header {
 
 .modal p {
   font-size: 18px;
-  font-weight: normal;
   margin-bottom: 10px;
 }
 
-.modal button {
-  font-size: 13px;
+.total_price h2 {
+  margin-top: 5px;
 }
+
 
 footer{
   height: 100px;
