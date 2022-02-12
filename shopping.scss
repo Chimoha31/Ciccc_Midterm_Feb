@@ -239,7 +239,7 @@ header {
 }
 
 // --------------------------
-// Modal
+// Cart Iyem Modal
 // -------------------------
 .overlay {
   position: fixed;
@@ -285,11 +285,11 @@ header {
     }
     & button {
       width: 60px;
-      padding: 3px;
+      padding: 1px;
       border: 1px solid rgb(95, 94, 94);
       border-radius: 10px;
       font-size: 20px;
-      background-color: aliceblue;
+      background-color: white;
     }
     & p::before {
       content: "$";
@@ -317,6 +317,16 @@ header {
 
 .total_price h2 {
   margin-top: 5px;
+}
+
+.total_price p {
+  width: 80px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 30px;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 

@@ -57,7 +57,7 @@ async function callAPI() {
       // -------------------------
       const originalImg = buttons[i].parentNode.firstChild;
       const doublicateImg = originalImg.cloneNode();
-      console.log(doublicateImg);
+      // console.log(doublicateImg);
       doublicateImg.style.width = "70px";
       doublicateImg.style.height = "70px";
       doublicateImg.style.borderRadius = "0%";
@@ -68,14 +68,14 @@ async function callAPI() {
       const doublicatePrice = originalPrice.cloneNode();
       doublicatePrice.textContent =
         buttons[i].parentNode.childNodes[2].textContent;
-      console.log(doublicatePrice);
+      // console.log(doublicatePrice);
 
       // --------------------------
       // Modal Total Price
       // -------------------------
       let totalPrice = document.querySelector(".total_price span");
       arry.push(parseInt(doublicatePrice.textContent));
-      console.log(arry);
+      // console.log(arry);
       let totalNum = 0;
       for (let j = 0; j < arry.length; j++) {
         totalNum += arry[j];
